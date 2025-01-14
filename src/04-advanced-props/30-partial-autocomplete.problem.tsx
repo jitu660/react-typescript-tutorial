@@ -12,8 +12,7 @@ type Size = keyof typeof presetSizes;
  * We want to allow users to pass in either a string, or
  * a Size. But there's an issue (see below).
  */
-
-type LooseSize = Size | string;
+type LooseSize = Size | (string & {});
 
 export const Icon = (props: { size: LooseSize }) => {
   return (

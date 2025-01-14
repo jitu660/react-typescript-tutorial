@@ -16,10 +16,12 @@ type ModalProps =
       title: string;
     };
 
-export const Modal = ({ variant, title }: ModalProps) => {
+export const Modal = ( props: ModalProps) => {
+  const {variant} = props;
   if (variant === "no-title") {
     return <div>No title</div>;
   } else {
+    const {title} = props;
     return <div>Title: {title}</div>;
   }
 };
